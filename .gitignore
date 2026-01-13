@@ -1,0 +1,8 @@
+*.tar.gz
+*.zip
+*.bin
+*.pth
+*.model
+sft_merged_model/
+__pycache__/
+.DS_Store
