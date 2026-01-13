@@ -1,10 +1,14 @@
 import json
 import math
 import re
+import os
 from tqdm import tqdm
 
-SFT_FILE = 'commentr_sft_data.jsonl'
-REWARD_FILE = 'commentr_reward_data.jsonl'
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+
+SFT_FILE = os.path.join(PROJECT_ROOT, 'processed_data/commentr_sft_data.jsonl')
+REWARD_FILE = os.path.join(PROJECT_ROOT, 'processed_data/commentr_reward_data.jsonl')
 
 MIN_LIKES = 0
 MIN_CHARS = 2

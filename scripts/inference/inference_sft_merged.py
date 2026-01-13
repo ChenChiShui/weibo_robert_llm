@@ -1,6 +1,10 @@
+import os
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-model_name = "model/sft_merged_model"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+
+model_name = os.path.join(PROJECT_ROOT, "model/sft_merged_model")
 
 print(f"Loading model from {model_name}...")
 tokenizer = AutoTokenizer.from_pretrained(model_name)

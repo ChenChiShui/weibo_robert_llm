@@ -1,13 +1,17 @@
 import json
 import math
 import re
+import os
 from collections import defaultdict
 from tqdm import tqdm
 import ijson
 
-POSTS_FILE = 'data/Posts_fixed.json'
-COMMENTS_FILE = 'data/Comments.json'
-OUTPUT_FILE = 'commentr_sft_data.jsonl'
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+
+POSTS_FILE = os.path.join(PROJECT_ROOT, 'data/Posts_fixed.json')
+COMMENTS_FILE = os.path.join(PROJECT_ROOT, 'data/Comments.json')
+OUTPUT_FILE = os.path.join(PROJECT_ROOT, 'processed_data/commentr_sft_data.jsonl')
 
 MIN_LIKES = 2
 MIN_CHARS = 4

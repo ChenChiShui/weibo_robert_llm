@@ -1,6 +1,10 @@
+import os
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-model_name = "model/Qwen3-4B-Instruct-2507"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+
+model_name = os.path.join(PROJECT_ROOT, "model/Qwen3-4B-Instruct-2507")
 
 # load the tokenizer and the model
 tokenizer = AutoTokenizer.from_pretrained(model_name)

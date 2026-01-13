@@ -1,6 +1,6 @@
 # Robert LLM - 基于 CommentR 数据集的微博社区评论大模型后训练
 
-基于 Qwen3-4B 和 CommentR Interaction Dataset 的微博评论机器人训练项目，通过多阶段训练（SFT → Reward Model → RL）学习生成符合人类偏好的高质量评论回复。
+基于 Qwen3-4B(2025.07) 和 CommentR Interaction Dataset(2025.11) 的微博评论机器人训练项目，通过多阶段训练（SFT → Reward Model → RL）学习生成符合人类偏好的高质量评论回复。
 
 后训练模型：[![Hugging Face](https://img.shields.io/badge/Models-Hugging%20Face-yellow)](https://huggingface.co/Chishui-Chen/robert-llm)
 
@@ -61,12 +61,15 @@ python inference_dpo_lora.py
 ## 项目结构
 
 ```
-robert-llm/
+weibo_robert_llm/
 ├── data/                          # 数据文件夹
 │   ├── sample_posts.json          # 示例帖子数据
 │   ├── sample_comments.json       # 示例评论数据
 │   ├── sample_users.json          # 示例用户数据
 │   └── README.md                  # 数据说明文档
+├── processed_data/                # 处理后的数据
+│   ├── commentr_sft_data.jsonl    # SFT训练数据
+│   └── commentr_dpo_reward_data.jsonl  # DPO/Reward训练数据
 ├── scripts/
 │   ├── data_processing/           # 数据处理脚本
 │   │   ├── convert_data.py        # SFT数据生成
@@ -81,6 +84,7 @@ robert-llm/
 │   └── inference/                 # 推理脚本
 │       ├── inference.py           # 基础推理
 │       ├── inference_sft_lora.py   # SFT模型推理
+│       ├── inference_sft_merged.py # SFT合并模型推理
 │       ├── inference_dpo_lora.py   # DPO模型推理
 │       ├── inference_reward_model.py # Reward模型推理
 │       └── compare_all_models.py  # 模型对比
@@ -88,7 +92,7 @@ robert-llm/
 │   ├── inference_comparison_results.jsonl  # 模型对比结果
 │   └── reward_model.json          # Reward 模型评估结果
 ├── docs/                          # 文档
-│   └── DATA_PROCESSING_COMPARISON.md
+│   └── DATA_PROCESSING.md         # 数据处理说明文档
 ├── .gitignore                     # Git 忽略文件
 ├── LICENSE                        # MIT 许可证
 ├── README.md                      # 本文件
