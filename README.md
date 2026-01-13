@@ -22,9 +22,7 @@ base_model：[![Hugging Face](https://img.shields.io/badge/Models-Hugging%20Face
 
 - **基于真实人类-AI 交互数据**：使用 CommentR Interaction Dataset，包含 55万+ 真实交互场景
 - **多阶段训练流程**：SFT（监督微调）→ Reward Model（奖励模型）→ DPO/GRPO（偏好对齐）
-- **参数高效微调**：采用 LoRA 技术，降低训练成本和显存需求
-- **多种训练策略**：支持 DPO（直接偏好优化）和 GRPO（组相对策略优化）
-- **完整工具链**：包含数据处理、模型训练、推理评估全流程脚本
+- **训练框架**：PyTorch, vllm, TRL
 
 ## 快速开始
 
