@@ -1,6 +1,6 @@
-# Robert LLM - 基于 CommentR 数据集的微博社区评论大模型后训练
+# Robert LLM - 微博评论生成大模型
 
-基于 Qwen3-4B(2025.07) 和 CommentR Interaction Dataset(2025.11) 的微博评论机器人训练项目，通过多阶段训练（SFT → Reward Model → RL）学习生成符合人类偏好的高质量评论回复。
+基于 Qwen3-4B(2025.07) 和 CommentR Interaction Dataset(2025.11) 的微博评论机器人训练项目，通过多阶段后训练（SFT → Reward Model → RL）学习生成符合人类偏好的高质量评论回复。
 
 后训练模型：[![Hugging Face](https://img.shields.io/badge/Models-Hugging%20Face-yellow)](https://huggingface.co/Chishui-Chen/robert-llm)
 
