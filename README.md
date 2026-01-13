@@ -22,7 +22,7 @@ base_model：[![Hugging Face](https://img.shields.io/badge/Models-Hugging%20Face
 
 - **基于真实人类-AI 交互数据**：使用 CommentR Interaction Dataset，包含 55万+ 真实交互场景
 - **多阶段训练流程**：SFT（监督微调）→ Reward Model（奖励模型）→ DPO/GRPO（偏好对齐）
-- **训练框架**：PyTorch, vllm, TRL
+- **训练框架**：PyTorch, VLLM, TRL
 
 ## 快速开始
 
