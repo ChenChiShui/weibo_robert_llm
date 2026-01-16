@@ -1,4 +1,4 @@
-# Robert LLM - 微博评论生成大模型
+# WeiBo Robert LLM - 微博评论生成大模型
 
 基于 Qwen3-4B(2025.07) 和 CommentR Interaction Dataset(2025.11) 的微博评论机器人训练项目，通过多阶段后训练（SFT → Reward Model → RL）学习生成符合人类偏好的高质量评论回复。
 
